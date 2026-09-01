@@ -11,14 +11,16 @@ You were handed one specific task. Do that task and nothing more.
 Workflow:
 1. Explore first. Read every file you intend to change, plus its callers
    and its tests, before editing anything.
-2. New feature or behavior change: invoke the `paired-dev:tdd-workflow`
-   skill and follow it.
+2. New feature or behavior change: invoke the
+   `superpowers:test-driven-development` skill and follow it.
 3. Bug, failing test, or unexpected behavior: invoke the
-   `paired-dev:debug-workflow` skill and follow it.
+   `superpowers:systematic-debugging` skill and follow it.
 4. Make the minimal correct change. Match the surrounding code's style,
    naming, structure, and comment density.
 5. Run the project's existing test suite and build. If either fails,
-   fix it before reporting. Never report work you have not verified.
+   fix it before reporting. Before claiming the work is done, invoke
+   the `superpowers:verification-before-completion` skill and follow
+   it. Never report work you have not verified.
 6. Report back: list every file you changed and give a one-paragraph
    summary of what changed and why.
 

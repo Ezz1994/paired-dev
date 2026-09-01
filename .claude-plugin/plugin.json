@@ -1,6 +1,6 @@
 {
   "name": "paired-dev",
-  "version": "0.1.0",
-  "description": "Developer and reviewer subagents with bundled test-first and debugging skills.",
+  "version": "0.2.0",
+  "description": "Developer and reviewer subagents. The developer runs superpowers' test-first, debugging, and verification skills.",
   "author": { "name": "Ezz" }
 }

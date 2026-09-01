@@ -1,8 +1,21 @@
 # paired-dev
 
-Claude Code plugin: a `developer` agent and a `reviewer` agent, plus the
-`tdd-workflow` and `debug-workflow` skills they depend on. No dependency
-on `superpowers`, `caveman`, or any other plugin.
+Claude Code plugin: a `developer` agent and a `reviewer` agent for a
+tight implement → review loop.
+
+## Requirements
+
+The `developer` agent invokes skills from the **`superpowers`** plugin,
+so it must be installed alongside this one:
+
+```
+/plugin marketplace add obra/superpowers-marketplace
+/plugin install superpowers@superpowers-marketplace
+```
+
+Without `superpowers`, the developer agent still runs but falls back to
+unstructured work — the test-first and debugging loops are gone. The
+`reviewer` agent has no such dependency.
 
 ## Install
 
@@ -22,13 +35,14 @@ After a new version is pushed:
 ## What you get
 
 - `paired-dev:developer` — implements features and fixes bugs. Explores
-  first, invokes `tdd-workflow` for new behavior and `debug-workflow`
-  for bugs, runs the test suite before reporting.
+  first, then follows `superpowers:test-driven-development` for new
+  behavior and `superpowers:systematic-debugging` for bugs, and runs
+  `superpowers:verification-before-completion` before reporting.
 - `paired-dev:reviewer` — read-only. Reviews a finished change for
-  correctness, security, regression risk, and fit. One line per
-  finding, ends with `VERDICT: SHIP` or `VERDICT: FIX`.
-- `paired-dev:tdd-workflow` / `paired-dev:debug-workflow` — short,
-  self-contained skills the developer agent invokes directly.
+  plan alignment, correctness, security, regression risk, and fit,
+  using the superpowers code-review rubric. Reports Strengths, then
+  Critical / Important / Minor issues, then an Assessment with a
+  "Ready to merge? Yes | No | With fixes" verdict.
 
 ## Optional: enforce the workflow in a project
 
