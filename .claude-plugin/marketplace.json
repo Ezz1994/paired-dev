@@ -1,0 +1,12 @@
+{
+  "name": "paired-dev",
+  "owner": { "name": "Ezz" },
+  "plugins": [
+    {
+      "name": "paired-dev",
+      "source": "./",
+      "description": "Developer and reviewer subagents with bundled workflow skills.",
+      "keywords": ["agents", "code-review", "tdd", "workflow"]
+    }
+  ]
+}

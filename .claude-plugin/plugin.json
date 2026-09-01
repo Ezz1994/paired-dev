@@ -1,0 +1,6 @@
+{
+  "name": "paired-dev",
+  "version": "0.1.0",
+  "description": "Developer and reviewer subagents with bundled test-first and debugging skills.",
+  "author": { "name": "Ezz" }
+}
