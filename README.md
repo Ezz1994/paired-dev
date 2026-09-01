@@ -7,7 +7,7 @@ on `superpowers`, `caveman`, or any other plugin.
 ## Install
 
 ```
-/plugin marketplace add ezzshaheen/paired-dev
+/plugin marketplace add Ezz1994/paired-dev
 /plugin install paired-dev@paired-dev
 ```
 
