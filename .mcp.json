@@ -5,7 +5,7 @@
       "-y",
       "@playwright/mcp@latest",
       "--isolated",
-      "--save-trace",
+      "--save-session",
       "--output-dir",
       "qa/evidence"
     ]
