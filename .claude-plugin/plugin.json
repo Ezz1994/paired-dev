@@ -1,6 +1,6 @@
 {
   "name": "paired-dev",
-  "version": "0.2.0",
-  "description": "Developer and reviewer subagents. The developer runs superpowers' test-first, debugging, and verification skills.",
+  "version": "0.3.0",
+  "description": "Developer, reviewer, and on-demand QA subagents. The developer runs superpowers' test-first, debugging, and verification skills; the QA agent runs browser test cases via Playwright MCP.",
   "author": { "name": "Ezz" }
 }

@@ -44,6 +44,36 @@ After a new version is pushed:
   Critical / Important / Minor issues, then an Assessment with a
   "Ready to merge? Yes | No | With fixes" verdict.
 
+- `paired-dev:qa-agent` — on demand only, via `/qa`. Finds the
+  feature's specs in the repo, designs test cases, runs them in a real
+  browser, and writes a pass/fail report with screenshots, traces, and
+  console/network logs. Never touches application code; writes only
+  under `qa/`. Works in any repo with no setup — the plugin bundles
+  the Playwright MCP server (Node.js required for `npx`).
+
+## QA usage
+
+Start your app locally, then:
+
+```
+/qa login                            full run: design, execute, report
+/qa checkout --focus "coupon codes"  targeted run on one item
+/qa settings --cases-only            design cases only, no browser
+/qa rerun qa/reports/<report>.md     re-run Failed / Blocked / Flaky cases
+/qa login --url https://staging.example.com   test a non-local URL
+```
+
+The agent finds a running local dev server by itself. It only opens
+non-local URLs you pass explicitly, and asks before anything that looks
+like production. If the app needs a login, give it test credentials in
+the command. Results land in `qa/test-cases/`, `qa/reports/`, and
+`qa/evidence/` (gitignored).
+
+Optional: install the Snagly plugin for deeper accessibility,
+visual-regression, and performance checks, or add a `qa/config.yml`
+to pin environments, features, and test accounts (format in
+`agents/qa-agent.md`).
+
 ## Optional: enforce the workflow in a project
 
 The plugin does not force itself onto any repo. If you want the

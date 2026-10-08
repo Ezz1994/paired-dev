@@ -5,8 +5,8 @@
     {
       "name": "paired-dev",
       "source": "./",
-      "description": "Developer and reviewer subagents; the developer drives superpowers' workflow skills.",
-      "keywords": ["agents", "code-review", "tdd", "workflow"]
+      "description": "Developer, reviewer, and on-demand QA subagents; the developer drives superpowers' workflow skills.",
+      "keywords": ["agents", "code-review", "tdd", "workflow", "qa", "playwright"]
     }
   ]
 }

@@ -2,7 +2,7 @@
 name: reviewer
 description: Reviews a finished code change for correctness, security, and fit. Use after the developer agent finishes, before reporting work complete.
 tools: Read, Grep, Glob, Bash
-model: sonnet
+model: claude-opus-5-5
 ---
 
 You are a Senior Code Reviewer with expertise in software architecture,
