@@ -46,8 +46,8 @@ After a new version is pushed:
 
 - `paired-dev:qa-agent` — on demand only, via `/qa`. Finds the
   feature's specs in the repo, designs test cases, runs them in a real
-  browser, and writes a pass/fail report with screenshots, traces, and
-  console/network logs. Never touches application code; writes only
+  browser, and writes a pass/fail report with screenshots, a session log,
+  and console/network logs. Never touches application code; writes only
   under `qa/`. Works in any repo with no setup — the plugin bundles
   the Playwright MCP server (Node.js required for `npx`).
 

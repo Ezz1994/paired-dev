@@ -172,9 +172,9 @@ containing `evidence/`.
    - **Blocked** — environment, data, access, or a safety rule prevented
      execution. Blocked is not Failed.
    - **Skipped** — deliberately not run (out of scope), with the reason.
-8. At the end, close the browser so the trace is written, then move any
-   trace or other files Playwright saved at the top of `qa/evidence/`
-   into `qa/evidence/<run-id>/`.
+8. At the end, close the browser so the session log is written, then
+   move the session log and any other files Playwright saved at the top
+   of `qa/evidence/` into `qa/evidence/<run-id>/`.
 
 ## Step 4 — Report
 
